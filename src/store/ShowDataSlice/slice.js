@@ -12,7 +12,7 @@ const initialState = {
 };
 
 export const ShowDataSlice = createSlice({
-  name: "SHOW_DATA",
+  name: "showdata",
   initialState,
   reducers: {
     setShowUser: (state, { payload }) => {
@@ -20,8 +20,8 @@ export const ShowDataSlice = createSlice({
       state.isOpenModal = true;
       state.userData = true;
       state.jobData = false;
-      state.jobDetailData = false;
       state.jobStyleData = false;
+      state.jobDetailData = false;
       state.serviceData = false;
       state.commentData = false;
     },
@@ -30,8 +30,8 @@ export const ShowDataSlice = createSlice({
       state.isOpenModal = true;
       state.userData = false;
       state.jobData = true;
-      state.jobDetailData = false;
       state.jobStyleData = false;
+      state.jobDetailData = false;
       state.serviceData = false;
       state.commentData = false;
     },
@@ -40,8 +40,8 @@ export const ShowDataSlice = createSlice({
       state.isOpenModal = true;
       state.userData = false;
       state.jobData = false;
-      state.jobDetailData = false;
       state.jobStyleData = true;
+      state.jobDetailData = false;
       state.serviceData = false;
       state.commentData = false;
     },
@@ -50,8 +50,8 @@ export const ShowDataSlice = createSlice({
       state.isOpenModal = true;
       state.userData = false;
       state.jobData = false;
-      state.jobDetailData = true;
       state.jobStyleData = false;
+      state.jobDetailData = true;
       state.serviceData = false;
       state.commentData = false;
     },
@@ -60,8 +60,8 @@ export const ShowDataSlice = createSlice({
       state.isOpenModal = true;
       state.userData = false;
       state.jobData = false;
-      state.jobDetailData = false;
       state.jobStyleData = false;
+      state.jobDetailData = false;
       state.serviceData = true;
       state.commentData = false;
     },
@@ -70,22 +70,23 @@ export const ShowDataSlice = createSlice({
       state.isOpenModal = true;
       state.userData = false;
       state.jobData = false;
-      state.jobDetailData = false;
       state.jobStyleData = false;
+      state.jobDetailData = false;
       state.serviceData = false;
       state.commentData = true;
     },
-    setCloseShow: (state, { payload }) => {
+    setShowDataClose: (state, { payload }) => {
       state.data = {};
       state.isOpenModal = false;
       state.userData = false;
       state.jobData = false;
-      state.jobDetailData = false;
       state.jobStyleData = false;
+      state.jobDetailData = false;
       state.serviceData = false;
       state.commentData = false;
     },
   },
 });
 
-export const { reducer: ShowDataReducer, actions: ShowDataActions } = ShowDataSlice;
+
+export const {reducer: ShowDataReducer, actions: ShowDataActions} = ShowDataSlice

@@ -31,7 +31,8 @@ import { EditDataActions } from "../../../store/EditdataSlice/slice";
 
 import "../../../Sass/admin/btnStyle.scss";
 import "../../../Sass/admin/tableStyle.scss";
-import { ShowDataActions } from "../../../store/ShowDataSlice/ShowData";
+import { ShowDataActions } from "../../../store/ShowDataSlice/slice";
+
 
 const style = {
   position: "absolute",

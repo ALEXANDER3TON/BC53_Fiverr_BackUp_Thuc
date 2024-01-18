@@ -7,7 +7,8 @@ import UserInfo from "./UserInfo";
 import ServicesInfo from "./ServicesInfo";
 import CommentInfo from "./CommentInfo";
 import JobInfo from "./JobInfo";
-import { ShowDataActions } from "../../../store/ShowDataSlice/ShowData";
+import { ShowDataActions } from "../../../store/ShowDataSlice/slice";
+
 
 const ModalField = () => {
   const {
@@ -23,7 +24,7 @@ const ModalField = () => {
 
   const dispatch = useDispatch();
   const handleCloseModal = () => {
-    dispatch(ShowDataActions.setCloseShow());
+    dispatch(ShowDataActions.setShowDataClose());
   };
   return (
     <Box>

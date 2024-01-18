@@ -25,7 +25,8 @@ import ModalField from "../ModalField/ModalField";
 import { AddDataActions } from "../../../store/AddDataSlice/slice";
 import { EditDataActions } from "../../../store/EditdataSlice/slice";
 import { deleteJob, getListJobPagination } from "../../../API/AdminTechnique";
-import { ShowDataActions } from "../../../store/ShowDataSlice/ShowData";
+import { ShowDataActions } from "../../../store/ShowDataSlice/slice";
+
 
 
 const ManaJob = () => {
@@ -37,13 +38,6 @@ const ManaJob = () => {
   const [pageIndex, setPageIndex] = useState(1);
   const [pageSize, setPageSize] = useState(6);
   const [keyword, setKeyword] = useState("");
-
-  //
-  const [openModal, setOpenModal] = useState(false);
-  const [isAddJob, setIsAddJob] = useState(false);
-
-  const [isShowInfoJob, setIsShowInfoJob] = useState(false);
-  const [job, setJob] = useState();
 
   const queryClient = useQueryClient();
   //tanstack-query
