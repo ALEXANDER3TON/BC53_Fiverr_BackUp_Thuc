@@ -31,7 +31,7 @@ import { EditDataActions } from "../../../store/EditdataSlice/slice";
 
 import "../../../Sass/admin/btnStyle.scss";
 import "../../../Sass/admin/tableStyle.scss";
-import { ShowDataActions } from "../../../Store/ShowDataSlice/slice";
+import { ShowDataActions } from "../../../store/ShowDataSlice/ShowData";
 
 const style = {
   position: "absolute",
@@ -105,7 +105,7 @@ const ManageUser = () => {
           display: "flex",
           justifyContent: "space-around",
           alignItems: "center",
-          margin:3
+          margin: 3,
         }}
       >
         <button className="button-14" role="button" onClick={handleAddAdmin}>
@@ -118,7 +118,7 @@ const ManageUser = () => {
       </Box>
       <ModalField />
       <Box>
-        <TableContainer  className="tableBackground">
+        <TableContainer className="tableBackground">
           <Table className="tableStyle">
             <TableHead sx={{ padding: 3 }}>
               <TableRow>

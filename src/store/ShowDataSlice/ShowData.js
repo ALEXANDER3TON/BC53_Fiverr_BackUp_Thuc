@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-
 const initialState = {
   data: {},
   isOpenModal: false,
@@ -13,7 +12,7 @@ const initialState = {
 };
 
 export const ShowDataSlice = createSlice({
-  name: "showdata",
+  name: "SHOW_DATA",
   initialState,
   reducers: {
     setShowUser: (state, { payload }) => {
@@ -21,8 +20,8 @@ export const ShowDataSlice = createSlice({
       state.isOpenModal = true;
       state.userData = true;
       state.jobData = false;
-      state.jobStyleData = false;
       state.jobDetailData = false;
+      state.jobStyleData = false;
       state.serviceData = false;
       state.commentData = false;
     },
@@ -31,8 +30,8 @@ export const ShowDataSlice = createSlice({
       state.isOpenModal = true;
       state.userData = false;
       state.jobData = true;
-      state.jobStyleData = false;
       state.jobDetailData = false;
+      state.jobStyleData = false;
       state.serviceData = false;
       state.commentData = false;
     },
@@ -41,8 +40,8 @@ export const ShowDataSlice = createSlice({
       state.isOpenModal = true;
       state.userData = false;
       state.jobData = false;
-      state.jobStyleData = true;
       state.jobDetailData = false;
+      state.jobStyleData = true;
       state.serviceData = false;
       state.commentData = false;
     },
@@ -51,8 +50,8 @@ export const ShowDataSlice = createSlice({
       state.isOpenModal = true;
       state.userData = false;
       state.jobData = false;
-      state.jobStyleData = false;
       state.jobDetailData = true;
+      state.jobStyleData = false;
       state.serviceData = false;
       state.commentData = false;
     },
@@ -61,8 +60,8 @@ export const ShowDataSlice = createSlice({
       state.isOpenModal = true;
       state.userData = false;
       state.jobData = false;
-      state.jobStyleData = false;
       state.jobDetailData = false;
+      state.jobStyleData = false;
       state.serviceData = true;
       state.commentData = false;
     },
@@ -71,23 +70,22 @@ export const ShowDataSlice = createSlice({
       state.isOpenModal = true;
       state.userData = false;
       state.jobData = false;
-      state.jobStyleData = false;
       state.jobDetailData = false;
+      state.jobStyleData = false;
       state.serviceData = false;
       state.commentData = true;
     },
-    setShowDataClose: (state, { payload }) => {
+    setCloseShow: (state, { payload }) => {
       state.data = {};
       state.isOpenModal = false;
       state.userData = false;
       state.jobData = false;
-      state.jobStyleData = false;
       state.jobDetailData = false;
+      state.jobStyleData = false;
       state.serviceData = false;
       state.commentData = false;
     },
   },
 });
 
-export const { reducer: ShowDataReducer, actions: ShowDataActions } =
-  ShowDataSlice;
+export const { reducer: ShowDataReducer, actions: ShowDataActions } = ShowDataSlice;
